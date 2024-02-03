@@ -8,7 +8,7 @@ on:
         default: cypress/e2e/*
 
 jobs:
-  cypress-e2e-eletron:
+  cypress-e2e-electron:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
@@ -18,9 +18,9 @@ jobs:
         uses: cypress-io/github-action@v6.5.0
         with:
           install-command: yarn install
-          browser: eletron
+          browser: electron
           record: true
-          group: UI Eletron
+          group: UI Electron
           spec: ${{ github.event.inputs.spec }}
         env:
           CYPRESS_RECORD_KEY: a099b711-ac39-4186-b57c-5dd301e45dbb
