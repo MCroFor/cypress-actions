@@ -52,7 +52,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
   cypress-e2e-firefox:
-    needs: cypress-e2e-electron
+    needs: cypress-e2e-chrome
     runs-on: ubuntu-latest
     container: 
        image: cypress/browsers:node18.12.0-chrome103-ff107
